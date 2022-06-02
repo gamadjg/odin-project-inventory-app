@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include("./partials/head.ejs") %>
+	<body>
+		<div class="body-container">
+			<div class="side-nav"><%- include("./partials/side-nav.ejs") %></div>
+			<div class="content"><%- include("./partials/body-head.ejs") %></div>
+			<div class="cards-list">
+				<% if (cardsList.length > 0){ %> <% cardsList.forEach(item => { %>
+				<div class="card-container">
+					<div class="card-header">
+						<!-- <i
+							class="card fa-solid fa-trash-can"
+							data-doc="<%= item.id %>"
+							id="task"
+
+							card_name: "Beer",
+							card_type: "regular",
+							card_description: "Regain one life point",
+							card_set: "Standard",
+						></i> -->
+						<h3 class="card_name">Name: <%= item.card_name %></h3>
+					</div>
+					<div class="card_type">
+						<p>Type: <%= item.card_type %></p>
+					</div>
+					<div class="card_description">
+						<p>Description: <%= item.card_description %></p>
+					</div>
+					<div class="card_set">
+						<p>Set: <%= item.card_set %></p>
+					</div>
+				</div>
+				<% }) %> <% }else{%>
+				<p>No cards.</p>
+				<% } %>
+			</div>
+		</div>
+		<div class="footer"><%- include('./partials/footer.ejs')%></div>
+	</body>
+</html>

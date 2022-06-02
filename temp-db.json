@@ -1,0 +1,26 @@
+{
+	"regular": [
+		{
+			"card_name": "Beer",
+			"card_type": "regular",
+			"card_description": "Regain one life point",
+			"card_set": "Standard"
+		}
+	],
+	"equipable": [
+		{
+			"card_name": "Mustang",
+			"card_type": "equipment",
+			"card_description": "Everyone see's you at a distance of +1",
+			"card_set": "Standard"
+		}
+	],
+	"trap": [
+		{
+			"card_name": "Bible",
+			"card_type": "trap",
+			"card_description": "Regain one life point",
+			"card_set": "Expansion_1"
+		}
+	]
+}
