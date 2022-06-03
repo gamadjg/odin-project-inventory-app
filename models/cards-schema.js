@@ -23,6 +23,6 @@ const cardSchema = new Schema(
 	{ timestampes: true }
 );
 
-const CardsModel = mongoose.model("cards-regular", cardSchema);
+const RegularCardsModel = mongoose.model("cards-regular", cardSchema);
 
-module.exports = CardsModel;
+module.exports = RegularCardsModel;

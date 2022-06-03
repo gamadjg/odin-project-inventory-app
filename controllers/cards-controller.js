@@ -1,4 +1,4 @@
-//const Cards = require("../models/todo-schema");
+const regularCards = require("../models/cards-schema");
 //const cards = require("../temp-db");
 
 // const {
@@ -6,7 +6,7 @@
 // } = require("../../../../nodejs2/net-ninja-yt-tutorials/mdm-tutorials/express-locallibrary-tutorial/app");
 
 const cards_index = (req, res) => {
-	const cards = [
+	const results = [
 		{
 			card_name: "Beer",
 			card_type: "regular",
@@ -18,19 +18,21 @@ const cards_index = (req, res) => {
 	const cardType = req.params.id;
 	switch (cardType) {
 		case "regular":
-			res.render("cards", { title: "Cards", cardsList: cards });
+			regularCards.find().then((result) => {
+				res.render("cards", { title: "Cards", cardsList: result });
+			});
 			break;
 		case "characters":
-			res.render("cards", { title: "Characters", cardsList: cards });
+			res.render("cards", { title: "Characters", cardsList: results });
 			break;
 		case "equipables":
-			res.render("cards", { title: "Equipables", cardsList: cards });
+			res.render("cards", { title: "Equipables", cardsList: results });
 			break;
 		case "traps":
-			res.render("cards", { title: "Traps", cardsList: cards });
+			res.render("cards", { title: "Traps", cardsList: results });
 			break;
 		default:
-			res.render("cards", { title: "Cards", cardsList: cards });
+			res.render("cards", { title: "Cards", cardsList: results });
 			break;
 	}
 };
