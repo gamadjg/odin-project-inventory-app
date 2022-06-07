@@ -10,4 +10,16 @@ router.get("/:id", (req, res) => {
 	}
 });
 
+router.post("/", (req, res) => {
+	try {
+		cardsController.create_card(req, res);
+	} catch (error) {
+		console.log(error);
+	}
+});
+
+router.delete("/:id", (req, res) => {
+	cardsController.delete_card(req, res);
+});
+
 module.exports = router;

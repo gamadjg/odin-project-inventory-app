@@ -1,26 +1,19 @@
 {
-	"regular": [
-		{
-			"card_name": "Beer",
-			"card_type": "regular",
-			"card_description": "Regain one life point",
-			"card_set": "Standard"
-		}
-	],
-	"equipable": [
-		{
-			"card_name": "Mustang",
-			"card_type": "equipment",
-			"card_description": "Everyone see's you at a distance of +1",
-			"card_set": "Standard"
-		}
-	],
-	"trap": [
-		{
-			"card_name": "Bible",
-			"card_type": "trap",
-			"card_description": "Regain one life point",
-			"card_set": "Expansion_1"
-		}
-	]
+    "_id": {
+        "$oid": "629ed56fbef7ae6015e32e7d"
+    }
+	card_name:
+"Black Jack"
+card_description
+:
+"He shows the second card he draws. On Heart or Diamonds, he draws anot..."
+card_set
+:
+"standard"
+card_type
+:
+"character"
+card_img_name
+:
+"character-blackjack.png"
 }

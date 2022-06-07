@@ -1,21 +1,25 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const cardSchema = new Schema(
+const cardsSchema = new Schema(
 	{
 		card_name: {
 			type: String,
 			required: true,
 		},
-		card_type: {
-			type: String,
-			required: false,
-		},
 		card_description: {
 			type: String,
-			required: false,
+			required: true,
 		},
 		card_set: {
+			type: String,
+			required: false,
+		},
+		card_type: {
+			type: String,
+			required: true,
+		},
+		card_img_name: {
 			type: String,
 			required: false,
 		},
@@ -23,6 +27,6 @@ const cardSchema = new Schema(
 	{ timestampes: true }
 );
 
-const RegularCardsModel = mongoose.model("cards-regular", cardSchema);
+const cardsModel = mongoose.model("cards", cardsSchema);
 
-module.exports = RegularCardsModel;
+module.exports = cardsModel;

@@ -3,6 +3,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	font-family: Roboto, sans-serif;
+	min-height: 100vh;
 }
 
 .body-container {
@@ -23,6 +24,10 @@ a:hover,
 a:active {
 	color: inherit;
 	text-decoration: none;
+}
+
+.side-nav {
+	width: 10%;
 }
 
 nav {
@@ -46,4 +51,14 @@ footer {
 	display: flex;
 	align-items: center;
 	gap: 10px;
+}
+
+.card-header {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+
+.card_name {
+	margin: 0px;
 }

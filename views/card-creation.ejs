@@ -7,7 +7,31 @@
 			<div class="content">
 				<%- include("./partials/body-head.ejs") %>
 				<form method="POST" action="/cards">
-					<input type="submit" />
+					<div>
+						<label for="card_type">Type</label>
+						<select id="card_type" name="card_type">
+							<option value="Regular">Regular</option>
+							<option value="Regular">Character</option>
+							<option value="Regular">Equipment</option>
+							<option value="Regular">Trap</option>
+						</select>
+					</div>
+					<div>
+						<label for="card_name">Name</label>
+						<input type="text" id="card_name" name="card_name" required />
+					</div>
+					<div>
+						<label for="card_description">Description</label>
+						<input
+							type="text"
+							id="card_description"
+							name="card_description"
+							required
+						/>
+					</div>
+					<div>
+						<input type="submit" />
+					</div>
 				</form>
 			</div>
 		</div>

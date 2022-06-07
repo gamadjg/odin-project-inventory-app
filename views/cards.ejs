@@ -9,21 +9,40 @@
 				<div class="cards-list">
 					<% if (cardsList.length > 0){ %> <% cardsList.forEach(item => { %>
 					<div class="card-container">
-						<img src="/assets/<%= item.card_type %>.png" />
+						<% if (item.card_set == "new card") { %>
 						<div class="card-info">
 							<div class="card-header">
+								<i
+									class="trash fa-solid fa-trash-can"
+									data-doc="<%= item.id %>"
+									id="delete_icon"
+								></i>
 								<h3 class="card_name">Name: <%= item.card_name %></h3>
-							</div>
-							<div class="card_type">
-								<p>Type: <%= item.card_type %></p>
 							</div>
 							<div class="card_description">
 								<p>Description: <%= item.card_description %></p>
 							</div>
+							<!-- <div class="card_metadata">
+								<p>Type: <%= item.card_type %></p>
+							</div> -->
+						</div>
+						<% }else{ %>
+						<img src="/assets/<%= item.card_img_name%>" />
+						<div class="card-info">
+							<div class="card-header">
+								<h3 class="card_name">Name: <%= item.card_name %></h3>
+							</div>
+							<div class="card_description">
+								<p>Description: <%= item.card_description %></p>
+							</div>
+							<!-- <div class="card_metadata">
+								<p>Type: <%= item.card_type %></p>
+							</div>
 							<div class="card_set">
 								<p>Set: <%= item.card_set %></p>
-							</div>
+							</div> -->
 						</div>
+						<% } %>
 					</div>
 					<% }) %> <% }else{%>
 					<p>No cards.</p>
@@ -32,5 +51,18 @@
 			</div>
 		</div>
 		<div class="footer"><%- include('./partials/footer.ejs')%></div>
+		<script>
+			const cards = document.querySelectorAll("i.trash");
+			cards.forEach((element) => {
+				element.addEventListener("click", (event) => {
+					const endpoint = `/cards/${element.dataset.doc}`;
+
+					fetch(endpoint, { method: "DELETE" })
+						.then((response) => response.json())
+						.then((data) => (window.location.href = data.redirect))
+						.catch((error) => console.log(error));
+				});
+			});
+		</script>
 	</body>
 </html>
