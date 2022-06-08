@@ -16,6 +16,38 @@ body {
 .content {
 	display: flex;
 	flex-direction: column;
+	width: 100%;
+}
+
+.cards-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: auto;
+	align-content: start;
+	justify-content: space-between;
+}
+
+.cards-list > * {
+	flex: 0 0 auto;
+}
+
+.card-container {
+}
+
+.card-header {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+
+.card-name {
+	margin: 0px;
+}
+
+.card-info {
+	max-width: 250px;
+	height: auto;
 }
 
 a,
@@ -27,7 +59,8 @@ a:active {
 }
 
 .side-nav {
-	width: 10%;
+	width: 20%;
+	background-color: lightgray;
 }
 
 nav {
@@ -51,14 +84,4 @@ footer {
 	display: flex;
 	align-items: center;
 	gap: 10px;
-}
-
-.card-header {
-	display: flex;
-	flex-direction: row;
-	gap: 10px;
-}
-
-.card_name {
-	margin: 0px;
 }
