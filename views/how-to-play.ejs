@@ -4,7 +4,58 @@
 	<body>
 		<div class="body-container">
 			<div class="side-nav"><%- include("./partials/side-nav.ejs") %></div>
-			<div class="content"><%- include("./partials/body-head.ejs") %></div>
+			<div class="content">
+				<%- include("./partials/body-head.ejs") %>
+				<div class="instructions-container">
+					<p>
+						BANG! is a shootout game, in Spaghetti Western style, between a
+						group of Outlaws and the Sheriff, who is their primary target.
+						<br />
+						<br />
+						<b>Setup: </b>Each player is dealt one random role card and one random character
+						card. 
+						<br />
+						<br />
+						The role card is either Sheriff, Renegade, Outlaw, or Deputy, and
+						determines a player's victory conditions; selection is from a
+						specific set of roles for each of 4, 5, 6, or 7 players (e.g., for a
+						4 player game, randomly distribute 1 sheriff, 1 renegade, and 2
+						outlaws) to ensure balance. The Sheriff role is revealed
+						immediately, while the other role cards remain face-down.
+						<br />
+						<br />
+						Each character has a humorously authentic western name (e.g., "Bart
+						Cassidy", "El Gringo") and a special power, all of which make a
+						fairly big difference in the game. Based on his character card, each
+						player then notes his starting life points in bullets, either 3 or
+						4; the Sheriff gets one extra bullet. 
+						<br />
+						<br />
+						Afterward each player is dealt a number of playing cards equal to
+						his bullets and play begins with the Sheriff.
+						<br />
+						<br />
+						<b>Phases of Play: </b>Each player takes the following actions, in order:
+
+						<ol>
+							<li>Draw two cards.</li>
+							<li>Play any number of cards.</li>
+							<li>Discard excess cards.</li>
+						</ol>
+						<b>Draw Two Cards: </b> Two playing cards are drawn, simply enough.
+						<br /><br />
+						<b>Play Any Number of Cards: </b> This is clearly the heart of the game. The player may play however many cards he wants from his hand. There are three major categories of cards:
+						<br /><br />
+						<b>Bang! Cards: </b>Each turn each player is allowed to play only one Bang! card. These are the combat cards which you use to wound and eventually kill other characters. (There's two ways to play more than one Bang! card a turn: the Volcanic is a gun which allows the playing of multiple Bang! cards in a turn; one of the characters, Willy the Kid, also has this ability.)
+						<br /><br />
+						There's a catch: you can only shoot at people in range, where your range to any player is based on how many players away they are, around your gaming table (so someone next to you is range 1, someone across the table in a 4-player game is range 2, etc.). The range of the Colt .45 that you start the game with is 1, meaning that initially you can only shoot adjacent players. As the game progresses, you'll get guns (permanent cards) with greater ranges.
+						
+						After you Bang! someone, they have the opportunity to avoid the shot. A permanent card, the Barrel, lets a player avoid 1 in 4 shots. If that fails, they can play a Missed! if they have one.
+						
+						When a shot hits, it removes a bullet from the character. If they are out of bullets, they have a last opportunity to play a Beer card which restores a bullet, otherwise they die.
+					</p>
+				</div>
+			</div>
 		</div>
 		<div class="footer"><%- include('./partials/footer.ejs')%></div>
 	</body>
