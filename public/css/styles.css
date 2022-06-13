@@ -25,14 +25,12 @@ body {
 	flex-wrap: wrap;
 	align-items: auto;
 	align-content: start;
-	justify-content: space-between;
+	justify-content: start;
 }
 
 .cards-list > * {
 	flex: 0 0 auto;
-}
-
-.card-container {
+	gap: 10px;
 }
 
 .card-header {

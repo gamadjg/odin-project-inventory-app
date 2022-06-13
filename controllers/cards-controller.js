@@ -23,11 +23,6 @@ const cards_index = (req, res) => {
 				res.render("cards", { title: "Equipment", cardsList: result });
 			});
 			break;
-		case "traps":
-			Cards.find({ card_type: { $eq: "traps" } }).then((result) => {
-				res.render("cards", { title: "Traps", cardsList: result });
-			});
-			break;
 		default:
 			res.render("cards", { title: "Cards", cardsList: [] });
 			break;
@@ -40,6 +35,7 @@ const create_card = (req, res) => {
 		card_description: req.body.card_description,
 		card_set: "new card",
 		card_type: req.body.card_type,
+		card_img_name: "new-card.png",
 	});
 	card
 		.save()
