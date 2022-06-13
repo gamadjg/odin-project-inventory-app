@@ -35,7 +35,7 @@ const create_card = (req, res) => {
 		card_description: req.body.card_description,
 		card_set: "new card",
 		card_type: req.body.card_type,
-		card_img_name: "new-card.png",
+		card_img_name: "new-card",
 	});
 	card
 		.save()
