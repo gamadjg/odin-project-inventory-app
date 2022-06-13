@@ -39,29 +39,12 @@ app.get("/", (req, res) => {
 	res.render("index", { title: "Home" });
 });
 
-{
-	/* <a href="/how-to-play">How to Play</a>
-<a href="/rules">Rules and Symbols</a>
-<a href="/player-roles">Player Roles</a>
-<a href="/cards/characters">Characters</a>
-
-<br />
-<label class="nav-labels">The Gist</label>
-<a href="/cards/regular">The Vanilla</a>
-<a href="/cards/equipables">Equipables</a>
-<a href="/cards/traps">Traps</a> */
-}
-
 app.get("/how-to-play", (req, res) => {
 	res.render("how-to-play", { title: "How to Play" });
 });
 
 app.get("/rules", (req, res) => {
 	res.render("rules", { title: "Rules" });
-});
-
-app.get("/player-roles", (req, res) => {
-	res.render("player-roles", { title: "Player Roles" });
 });
 
 app.use("/cards", cardRoutes);

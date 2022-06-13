@@ -6,26 +6,34 @@
 			<div class="side-nav"><%- include("./partials/side-nav.ejs") %></div>
 			<div class="content">
 				<%- include("./partials/body-head.ejs") %>
-				<form method="POST" action="/cards">
-					<div class="labels">
-						<label for="card_type">Type</label>
-						<label for="card_name">Name</label>
-						<label for="card_description">Description</label>
+				<form class="card-creation-form" method="POST" action="/cards">
+					<div class="card-labels-container">
+						<label for="card-type-input">Type</label>
+						<label for="card-name-input">Name</label>
+						<label for="card-description-input">Description</label>
 					</div>
-					<div class="form-inputs">
-						<select id="card_type" name="card_type">
+					<div class="card-inputs-container">
+						<select class="card-inputs" id="card-type-input" name="card_type">
 							<option value="regular">Regular</option>
 							<option value="equipment">Equipment</option>
 							<option value="character">Character</option>
 							<option value="role">Role</option>
 						</select>
-						<input type="text" id="card_name" name="card_name" required />
+						<input
+							type="text"
+							class="card-inputs"
+							id="card-name-input"
+							name="card_name"
+							required
+						/>
 						<textarea
-							id="card_description"
+							class="card-inputs"
+							id="card-description-input"
 							name="card_description"
 							required
 						></textarea>
-						<input type="submit" />
+
+						<input id="card-submit-input" type="submit" />
 					</div>
 				</form>
 			</div>

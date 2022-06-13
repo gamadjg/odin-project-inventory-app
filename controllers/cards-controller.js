@@ -23,6 +23,11 @@ const cards_index = (req, res) => {
 				res.render("cards", { title: "Equipment", cardsList: result });
 			});
 			break;
+		case "roles":
+			Cards.find({ card_type: { $eq: "role" } }).then((result) => {
+				res.render("cards", { title: "Player Roles", cardsList: result });
+			});
+			break;
 		default:
 			res.render("cards", { title: "Cards", cardsList: [] });
 			break;
