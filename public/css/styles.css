@@ -141,6 +141,7 @@ a:hover {
 footer {
 	display: flex;
 	justify-content: space-between;
+	margin: 10px;
 }
 
 .footer-left {
@@ -148,3 +149,11 @@ footer {
 	align-items: center;
 	gap: 10px;
 }
+
+.github-logo {
+}
+/*
+ .linkedin-logo {
+	width: 50%;
+	height: 50%;
+} */
