@@ -61,3 +61,5 @@ app.use((req, res) => {
 	//res.sendFile("./views/404.html", { root: __dirname });
 	res.render("404", { title: "ERROR" });
 });
+
+module.exports = app;
