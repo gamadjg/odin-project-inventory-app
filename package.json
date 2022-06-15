@@ -2,7 +2,7 @@
 	"name": "simple-node-website",
 	"version": "1.0.0",
 	"description": "Odin Project, NodeJS Inventory Application",
-	"main": "index.js",
+	"main": "app.js",
 	"scripts": {
 		"start": "node app.js"
 	},
