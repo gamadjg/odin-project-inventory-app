@@ -12,6 +12,9 @@
 						<img src="/assets/<%= item.card_img_name%>.png" />
 						<div class="card-info">
 							<div class="card-header">
+								<% if (item.card_img_name === "new-card"){ %>
+								<i data-doc="<%= item.id %>" class="trash fa">&#xf014;</i>
+								<% } %>
 								<h3 class="card-name"><%= item.card_name %></h3>
 							</div>
 							<div class="card-description">

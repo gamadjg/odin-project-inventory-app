@@ -45,9 +45,23 @@ const create_card = (req, res) => {
 	card
 		.save()
 		.then((result) => {
-			// Redirect (refresh) tasks page which will list the new db data.
-			res.redirect("cards/all");
-			console.log("new task has been added to the db");
+			switch (req.body.card_type) {
+				case "character":
+					res.redirect("cards/characters");
+					break;
+				case "regular":
+					res.redirect("cards/regular");
+					break;
+				case "equipment":
+					res.redirect("cards/equipables");
+					break;
+				case "role":
+					res.redirect("cards/roles");
+					break;
+				default:
+					res.redirect("cards/all");
+					break;
+			}
 		})
 		.catch((err) => {
 			console.log(err);
@@ -57,14 +71,33 @@ const create_card = (req, res) => {
 const delete_card = (req, res) => {
 	const id = req.params.id;
 	// mongoose method called to delete task in db, task specified by its id
-	Cards.findByIdAndDelete(id)
-		.then(() => {
-			// respond to requets with a json redirect to /tasks
-			res.json({ redirect: "/cards/all" });
-		})
-		.catch((error) => {
-			console.log(error);
-		});
+
+	Cards.findById(id).then((result) => {
+		const cardRedirectLoc = result.card_type;
+		Cards.findByIdAndDelete(id)
+			.then(() => {
+				switch (cardRedirectLoc) {
+					case "regular":
+						res.json({ redirect: "/cards/regular" });
+						break;
+					case "role":
+						res.json({ redirect: "/cards/roles" });
+						break;
+					case "equipment":
+						res.json({ redirect: "/cards/equipables" });
+						break;
+					case "character":
+						res.json({ redirect: "/cards/characters" });
+						break;
+					default:
+						res.json({ redirect: "/cards/all" });
+						break;
+				}
+			})
+			.catch((error) => {
+				console.log(error);
+			});
+	});
 };
 
 module.exports = {

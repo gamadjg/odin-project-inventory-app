@@ -36,7 +36,7 @@ const myLogger = function (req, res, next) {
 app.use(myLogger);
 
 app.get("/", (req, res) => {
-	res.render("index", { title: "Home" });
+	res.render("how-to-play", { title: "How to Play" });
 });
 
 app.get("/how-to-play", (req, res) => {
