@@ -1,17 +1,25 @@
-# Odin Project
+# BANG! Card Game, Card Inventory App
 
-## Full Stack Javascript Path, NodeJS: Inventory Application
+![image](public/assets/bang.png)
 
-[Project details](https://www.theodinproject.com/lessons/nodejs-inventory-application)
+## Live Preview
 
-[Live site on Heroku](https://bang-inventory-app.herokuapp.com/)
+[Heroku Link](https://bang-inventory-app.herokuapp.com/)
+
+## Overview
+
+Card inventory application based around the game, Bang!
 
 Tech Stack:
 
-- MongoDB
-- ExpressJS
-- (No React or Angular for now)
+- Javascript
 - NodeJS
+- Express
+- MongoDB Atlas
 - Heroku
 
-The goal of this project is to setup an inventory management website following the model-view-controller architecture. The site must be able to communicate with MongoDB to perform HTTP requests. Users are able to create their own card for the Bang! board game (Authentication pending). The new card deails will get saved into a db collection, and can be deleted as well.
+## Features
+
+- Built around the MVC architectural design pattern
+- Requested card info is pulled from Atlas collection from controller, on route request.
+- Users can create their own card. A document within the corresponding mongodb collection is generated to hold the information.
