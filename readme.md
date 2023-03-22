@@ -4,7 +4,7 @@
 
 ## Live Preview
 
-[Heroku Link](https://bang-inventory-app.herokuapp.com/)
+[Heroku Link](https://murmuring-meadow-17805.herokuapp.com/)
 
 ## Overview
 
