@@ -4,7 +4,7 @@
 
 ## Live Preview
 
-[Heroku Link](https://murmuring-meadow-17805.herokuapp.com/)
+[Google Cloud Link](https://inventory-app-382119.wl.r.appspot.com/cards/all)
 
 ## Overview
 
@@ -16,7 +16,7 @@ Tech Stack:
 - NodeJS
 - Express
 - MongoDB Atlas
-- Heroku
+- Google Cloud, App Engine
 
 ## Features
 
