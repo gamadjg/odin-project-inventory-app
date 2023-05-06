@@ -23,7 +23,7 @@ Card inventory application based on the board game, Bang!
 
 ## Features
 
-- Users can create their own card. A document within the corresponding mongodb collection is generated to store the information.
+- Users can create their own card. A document within the corresponding mongoDB collection is generated to store the information.
 
 ## Packages, Frameworks, and Technology
 
